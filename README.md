@@ -17,6 +17,10 @@ Project has a document PasswordRecovery.feature which contains the following tes
 * Password recovery with existing user
 * Password recovery with nonexisting user
 
+Project has a document AddContact.feature which contains the following tests:
+
+* Clicking on the Add new contact button really opens the window for adding a contact
+
 ## Prerequisites Software/Tools
 
 1. Java Development Kit (Java 17)

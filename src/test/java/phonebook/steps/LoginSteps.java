@@ -4,9 +4,11 @@ import io.cucumber.docstring.DocString;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import phonebook.pages.ContactsPage;
 
 import static com.codeborne.selenide.Selenide.open;
-import static phonebook.Constants.LOGIN_URL;
+import static com.codeborne.selenide.Selenide.page;
+import static phonebook.Constants.*;
 
 public class LoginSteps extends BaseSteps {
 
@@ -46,5 +48,14 @@ public class LoginSteps extends BaseSteps {
     public void iSeeLongPasswordError(DocString errorMessage) {
         String message = errorMessage.getContent();
         loginPage.checkPassErrorMessWithMaxNumOfChar(message);
+    }
+
+    @Given("I am logged in")
+    public ContactsPage iAmLoggedIn() {
+        open(LOGIN_URL);
+        loginPage.enterEmail(USER_EMAIL);
+        loginPage.enterPassword(USER_PASSWORD);
+        loginPage.clickOnLoginBtn();
+        return page(ContactsPage.class);
     }
 }

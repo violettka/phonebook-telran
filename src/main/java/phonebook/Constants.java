@@ -15,5 +15,8 @@ public class Constants {
 
     //test credentials
     public static String USER_EMAIL = "test@gmail.com";
+    public static String USER_PASSWORD = "test@gmail.com";
+
+    //test data
     public static String NONEXISTING_USER_EMAIL = faker.internet().emailAddress();
 }
