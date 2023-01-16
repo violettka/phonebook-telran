@@ -29,7 +29,7 @@ public class ContactsSteps extends BaseSteps {
         contactsPage.checkAddContactWindow(addContactText);
     }
 
-    @And("I add a new contact")
+    @When("I add a new contact")
     public void iAddANewContact() {
         contactsPage.createContact();
     }
@@ -45,7 +45,7 @@ public class ContactsSteps extends BaseSteps {
     }
 
 
-    @And("I choose {} language")
+    @When("I choose {} language")
     public void iChooseLanguageLanguage(String language) {
         contactsPage.changeLanguage(language);
     }
