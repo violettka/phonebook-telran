@@ -19,4 +19,6 @@ public class Constants {
 
     //test data
     public static String NONEXISTING_USER_EMAIL = faker.internet().emailAddress();
+    public static String ADD_CONTACT_NAME = faker.name().firstName();
+    public static String ADD_CONTACT_LASTNAME = faker.name().lastName();
 }

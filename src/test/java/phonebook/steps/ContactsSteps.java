@@ -1,6 +1,7 @@
 package phonebook.steps;
 
 import io.cucumber.docstring.DocString;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -26,5 +27,15 @@ public class ContactsSteps extends BaseSteps {
     public void iSeeWindowWithAnInscription(DocString text) {
         String addContactText = text.getContent();
         contactsPage.checkAddContactWindow(addContactText);
+    }
+
+    @And("I add a new contact")
+    public void iAddANewContact() {
+        contactsPage.createContact();
+    }
+
+    @Then("I see first and last name of contact")
+    public void iSeeFirstNameAndLastName() {
+        contactsPage.checkNameAndLastNameOfContact();
     }
 }
