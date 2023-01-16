@@ -7,7 +7,7 @@ Feature: Password recovery
   Scenario: Password recovery with existing user
     When I input email
     And I click on Send button
-    Then I see message
+    Then I see success message
 
     """
   Password recovery instructions have been sent to

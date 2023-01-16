@@ -22,6 +22,10 @@ Project has a document AddContact.feature which contains the following tests:
 * Clicking on the Add new contact button really opens the window for adding a contact
 * Adding a new contact
 
+Project has a document ChangeLanguage.feature which contains the following tests:
+
+* Language change check
+
 ## Prerequisites Software/Tools
 
 1. Java Development Kit (Java 17)

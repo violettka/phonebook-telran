@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"json:target/cucumber-report.json", "pretty"},
         glue = "phonebook.steps",
-        tags = "@add_new_contact"
+        tags = "@change_language"
 
 )
 

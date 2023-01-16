@@ -26,8 +26,8 @@ public class PasswordRecoverySteps extends BaseSteps {
     }
 
 
-    @Then("I see message")
-    public void iSeeMessage(DocString successMessage) {
+    @Then("I see success message")
+    public void iSeeSuccessMessage(DocString successMessage) {
         String message = successMessage.getContent();
         pwdRecoveryPage.checkSuccessMessage(message);
     }

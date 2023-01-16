@@ -20,6 +20,8 @@ public class ContactsPage {
     protected static By saveButton = By.xpath("//*[@id='add-contact-form']/div[4]/button[2]");
     protected static By contactFirstName = By.xpath("//*[@id='contact-first-name']");
     protected static By contactLastName = By.xpath("//*[@id='contact-last-name']");
+    protected static By changeLangButton = By.xpath("//*[@id='langSelect']");
+    protected static By myProfileText = By.xpath("//*[contains(text(),'Mein Profil')]");
 
 
     //methods
@@ -44,5 +46,17 @@ public class ContactsPage {
     public void checkNameAndLastNameOfContact() {
         $(contactFirstName).shouldHave(Condition.text(ADD_CONTACT_NAME));
         $(contactLastName).shouldHave(Condition.text(ADD_CONTACT_LASTNAME));
+    }
+
+    public void clickOnChangeLanguage() {
+        $(changeLangButton).click();
+    }
+
+    public void changeLanguage(String text) {
+        $(By.xpath("//*[contains(text(),'" + text + "')]")).click();
+    }
+
+    public void checkLanguage(String text) {
+        $(By.xpath("//*[contains(text(),'" + text + "')]")).shouldHave(Condition.text(text));
     }
 }

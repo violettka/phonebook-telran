@@ -38,4 +38,20 @@ public class ContactsSteps extends BaseSteps {
     public void iSeeFirstNameAndLastName() {
         contactsPage.checkNameAndLastNameOfContact();
     }
+
+    @When("I click on change language button")
+    public void iClickOnChangeLanguageButton() {
+        contactsPage.clickOnChangeLanguage();
+    }
+
+
+    @And("I choose {} language")
+    public void iChooseLanguageLanguage(String language) {
+        contactsPage.changeLanguage(language);
+    }
+
+    @Then("I see {} the following text")
+    public void iSeeTheFollowingTextTheFollowingText(String language) {
+        contactsPage.checkLanguage(language);
+    }
 }
